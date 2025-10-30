@@ -30,6 +30,12 @@ This repository details an end-to-end **E-commerce Product Recommendation System
 
 ---
 
+## 🚀 Project Workflow
+
+The architecture follows the end-to-end workflow illustrated below, starting from local development through containerization, deployment on Minikube, and continuous monitoring.
+
+![E-Commerce Product Recommender Workflow Diagram](workflow.png)
+
 ## 🏛️ Repository Structure
 
 E-commerce_Product_Recommendation_System/ ├── app/ # Flask application and web resources │ ├── app.py # Main Flask application │ ├── templates/ # HTML templates for the UI │ └── static/ # CSS/JS and static assets ├── src/ # Core pipeline: config, converter, ingestion, RAG │ ├── config.py # Project configurations │ ├── data_converter.py # Raw data conversion logic │ ├── data_ingestion.py # Data storage/DB ingestion │ ├── rag_chain.py # Logic for RAG structure/embeddings │ └── recommend.py # Offline recommendation execution ├── deployment/ │ ├── Dockerfile # Docker build file for the app │ ├── k8s/ # Kubernetes deployment manifests │ │ ├── deployment.yaml │ │ ├── service.yaml │ │ ├── prometheus-deploy.yaml │ │ └── grafana-deploy.yaml ├── docs/ │ └── Flipkart_product_recommender_Workflow.png # Project architecture diagram ├── data/ # Placeholder for raw/processed data ├── notebooks/ # EDA, experimentation, and evaluation scripts ├── requirements.txt # Python dependency list ├── README.md # This file └── scripts/ ├── build_and_push.sh # Script to build and push Docker image └── deploy_minikube.sh # Script to deploy K8s manifests on Minikube
